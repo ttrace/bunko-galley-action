@@ -32,7 +32,7 @@ jobs:
       run: export LANG=ja_JP.utf8
     
     - name: Install dependencies
-      run: npm ci
+      run: npm install
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
