@@ -5,5 +5,15 @@
   "author": "Taiyo Fujii",
   "license": "MIT",
   "devDependencies": {
+    "assert": "^2.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-count-stat": "^1.0.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-header": "^2.0.9",
+    "gulp-if": "^3.0.0",
+    "gulp-order": "^1.2.0"
   }
 }
