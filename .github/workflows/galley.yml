@@ -48,18 +48,18 @@ jobs:
       run: node .github/workflows/build.js
 
     - name: publish.galley
-      run: npx vivliostyle build -t 240 publish/buildHtml.html -o publish/galley.pdf
+      run: npx vivliostyle build -t 240 publish/buildHtml.html -o publish/${{ github.ref }}.pdf
 
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
         name: dist-galley
-        path: publish/galley.pdf
+        path: publish/${{ github.ref }}.pdf
 
     - uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: "publish/galley.pdf"
+        files: "publish/refs/tags/*.pdf"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
