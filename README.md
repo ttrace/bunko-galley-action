@@ -16,4 +16,5 @@
 このGithub Actionsは、[VivlioStyle CLI](https://docs.vivliostyle.org/ja/vivliostyle-cli)を用いて、文庫本風のPDFを生成します。
 
 ## 集版の方法
-プロジェクト中にあるファイルをかき集めるために、Gulpを利用することができます。
+プロジェクト中にあるファイルを集めるために、Gulpを利用することができます。  
+サンプルのタスクを添付しました。`gulpfile.js`を参照してください。
