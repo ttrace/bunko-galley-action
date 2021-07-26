@@ -14,3 +14,6 @@
 ## 修飾とマークアップ
 マークアップと文書の修飾にはHTMLとCSSを用いてください。  
 このGithub Actionsは、[VivlioStyle CLI](https://docs.vivliostyle.org/ja/vivliostyle-cli)を用いて、文庫本風のPDFを生成します。
+
+## 集版の方法
+プロジェクト中にあるファイルをかき集めるために、Gulpを利用することができます。

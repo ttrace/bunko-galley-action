@@ -31,9 +31,12 @@ jobs:
     - name: set language
       run: export LANG=ja_JP.utf8
     
+    # gulpを使う場合には以下の4行をコメントアウトしてください。
     # - name: Install dependencies
-    #  run: npm ci
-    #  if you want use gulp or another CI process on local, comment out here.
+    #  run: npm install
+    #- name: go gulp
+    #  run: npx gulp build
+
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
