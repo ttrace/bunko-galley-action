@@ -44,6 +44,9 @@ jobs:
     - name: install Vivliostyle
       run: npm install @vivliostyle/cli --save
 
+    - name: get version of Vivliostyle/cli
+      run: npx vivliostyle -v
+
     - name: build html
       run: node .github/workflows/build.js
 
@@ -56,10 +59,18 @@ jobs:
         name: dist-galley
         path: publish/${{ github.ref }}.pdf
 
+    - name: Archive production artifacts text
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-text
+        path: publish/novel.txt
+
     - uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: "publish/refs/tags/*.pdf"
+        body: "${{ github.ref }}で更新した原稿です"
+        files: |
+          publish/refs/tags/*.pdf
+          publish/novel.txt
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
