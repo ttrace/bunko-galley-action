@@ -42,7 +42,7 @@ jobs:
 
       # Runs a single command using the runners shell
     - name: install Vivliostyle
-      run: npm install @vivliostyle/cli --save
+      run: npm install @vivliostyle/cli@3.5.0  --save
 
     - name: get version of Vivliostyle/cli
       run: npx vivliostyle -v
